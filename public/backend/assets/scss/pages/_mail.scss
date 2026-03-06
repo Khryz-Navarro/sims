@@ -1,0 +1,230 @@
+/* Start:: mail */
+.main-nav-column {
+    .nav-link {
+        span {
+            @apply font-normal text-[11px] text-textmuted ms-auto;
+        }
+        &.active i {
+            @apply text-primary #{!important};
+        }
+    }
+}
+.main-mail-menu {
+    .main-nav-column {
+        .nav-link {
+            &.active i {
+                @apply text-primary #{!important};
+            }
+        }
+    }
+}
+.main-nav-column .nav-link:hover {
+    @apply text-defaulttextcolor;
+    i:not([class*=" tx-"]) {
+        @apply text-defaulttextcolor;
+    }
+}
+.main-nav-column .nav-link i:not([class*=" tx-"]) {
+    @apply text-gray-600;
+}
+
+.main-content-label.main-content-label-sm {
+    @apply text-[10px] font-semibold uppercase text-gray-500;
+}
+@media (min-width: 992px) {
+    .main-mail-header {
+        @apply py-0 ps-0 pe-[25px] mb-[25px];
+    }
+}
+.main-mail-header {
+    @apply flex items-center justify-between mb-[20px] py-0 px-[20px];
+}
+@media (min-width: 768px) {
+    .main-content-body-mail .main-mail-header>div:last-child {
+        @apply flex items-center;
+    }
+}
+.main-mail-header>div:last-child {
+    @apply hidden;
+}
+.main-mail-header>div:last-child>span {
+    @apply text-[12px] me-[10px];
+}
+.main-mail-header .btn-group .btn.disabled, 
+.main-mail-header .btn-group .sp-container button.disabled {
+    @apply text-defaultborder border-defaultborder z-0;
+}
+.main-mail-header .btn-group .btn, 
+.main-mail-header .btn-group .sp-container button {
+    @apply text-[21px] flex items-center justify-center w-[38px] h-[38px] leading-[0] p-0 relative border-defaultborder;
+}
+.main-mail-options {
+    @apply py-[5px] ps-[10px] pe-[20px] border border-defaultborder hidden items-center justify-end;
+}
+.ckbox {
+    @apply font-normal relative leading-none mb-0;
+    span:before {
+        @apply w-[16px] h-[16px] bg-white border border-defaultborder top-[1px] start-0 rounded-sm;
+    }
+    span:before, span{
+        @apply after:leading-[18px] after:absolute;
+    }
+    span{
+        @apply after:top-[1px] after:start-0 after:w-[16px] after:h-[16px] after:bg-[55%] after:bg-no-repeat after:bg-primary after:leading-[17px] after:hidden after:rounded-sm;
+        // background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+        // background-position: 55% 50%;
+      }
+}
+.ckbox input[type=checkbox] {
+    @apply border-defaultborder m-0 rounded-sm;
+}
+.main-mail-options {
+    .ti-btn, 
+    .sp-container button {
+        @apply text-[19px] flex items-center justify-center w-[35px] h-[35px] bg-transparent border-0;
+        &:hover {
+            @apply bg-light/80;
+        }
+    }
+    .ti-btn.disabled, .sp-container button.disabled {
+        @apply bg-transparent text-gray-700;
+    }
+}
+.main-mail-list {
+    @apply border border-defaultborder;
+}
+.main-mail-list {
+    @apply overflow-hidden;
+}
+.main-mail-list .main-mail-body {
+    @apply w-[calc(100%-80px)] cursor-pointer;
+}
+@media (min-width: 1200px) {
+    .main-mail-list .main-mail-body {
+        @apply max-w-[640px];
+    }
+
+}
+.main-mail-attachment {
+    @apply me-[15px] text-[21px] leading-[0.9] hidden;
+}
+.main-mail-date {
+    @apply text-[11px] absolute top-[12px] end-[15px] text-gray-500 ms-auto;
+}
+@media (min-width: 992px) {
+    .main-mail-list {
+        @apply border-t-0;
+    }
+    .main-mail-list {
+        .main-mail-attachment {
+            @apply block absolute end-[63px] top-[8px];
+        }
+        .main-mail-item {
+            @apply w-auto py-[10px] px-[25px];
+        }
+        .main-mail-date {
+            @apply absolute text-[13px] top-[8px];
+        }
+    }
+    .main-mail-list .main-mail-body {
+        @apply max-w-[460px] me-[15px] flex-1;
+    }
+    .main-mail-item .main-mail-checkbox {
+        @apply block;
+    }
+    .main-mail-list .main-mail-star {
+        @apply relative bottom-auto top-[2px];
+    }
+    .main-mail-options {
+        @apply ps-[25px] flex justify-between;
+    }
+}
+.main-mail-item.unread {
+    @apply bg-white;
+}
+.main-mail-item:hover, .main-mail-item{
+    @apply focus:bg-white;
+}
+.main-mail-item:first-child {
+    @apply border-t-0;
+}
+@media (min-width: 576px) {
+    .main-mail-item {
+        @apply py-[10px] px-[20px];
+    }
+}
+.main-mail-checkbox {
+    @apply me-0 hidden;
+}
+.main-mail-star {
+    @apply me-[15px] text-[18px] leading-[0.9] absolute bottom-[10px] end-0;
+}
+.main-mail-item {
+    .main-img-user, .main-avatar {
+        @apply flex-shrink-0 me-[15px];
+    }
+}
+.main-img-user {
+    @apply inline-block relative w-[36px] h-[36px] rounded-full text-center;
+}
+.main-img-user {
+    img {
+        @apply object-cover rounded-full w-full h-full max-w-full #{!important};
+    }
+}
+.main-mail-item {
+    @apply py-[10px] px-[15px] border-b border-b-defaultborder bg-light/40 relative flex items-center w-full;
+}
+.main-avatar {
+    @apply relative w-[36px] h-[36px] rounded-full flex items-center justify-center text-white font-semibold text-[16px] bg-gray-700;
+}
+.main-mail-item .main-avatar {
+    @apply flex-shrink-0 me-[15px];
+}
+.main-mail-star.active {
+    @apply text-warning;
+}
+.ckbox input[type=checkbox]:checked+span:after {
+    @apply hidden;
+}
+
+.main-mail-header>div:first-child p {
+    @apply text-[13px] mb-0;
+}
+
+.main-content-title {
+    @apply text-defaulttextcolor font-medium text-[32px] -indent-1 leading-none relative mb-[20px];
+}
+
+.main-mail-from {
+    @apply text-[13px];
+}
+.main-mail-subject strong {
+    @apply font-bold text-[14px] text-defaulttextcolor block whitespace-nowrap text-ellipsis overflow-hidden w-full;
+}
+@media (min-width: 576px) {
+    .main-mail-subject {
+        @apply whitespace-nowrap text-ellipsis overflow-hidden w-full;
+        strong {
+            @apply inline w-auto whitespace-normal overflow-visible;
+            // text-overflow: inherit;
+        }
+    }
+}
+.main-chat-list .media.selected {
+    @apply bg-defaultbackground border-s border-s-primary z-[2];
+}
+.main-chat-list .media:hover, .main-chat-list .media:focus {
+    @apply bg-defaultbackground;
+}
+[data-theme-mode="dark"] {
+    .main-nav-column {
+        .nav-link {
+            @apply text-[rgba(255_255_255_0.6)];
+        }
+    }
+    .main-mail-options .ti-btn.disabled, .main-mail-options .sp-container button.disabled {
+        @apply text-[rgba(255_255_255_0.6)];
+    }
+}
+/* End:: mail */

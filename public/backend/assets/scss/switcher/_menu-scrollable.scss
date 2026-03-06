@@ -1,0 +1,35 @@
+/* Start Menu-Scrollable Styles */
+[data-menu-position="scrollable"] {
+  .app-sidebar {
+    @apply absolute;
+  }
+
+  &:not([data-nav-layout="horizontal"]) {
+    .content {
+      @apply min-h-[1300px];
+    }
+  }
+}
+
+[data-menu-position="scrollable"][data-nav-layout="vertical"] {
+  .app-sidebar .main-sidebar-header {
+    @apply absolute;
+  }
+}
+
+/* End Menu-Scrollable Styles */
+[data-menu-position="scrollable"][data-header-position="scrollable"] {
+  .app-sidebar {
+    @apply absolute #{!important};
+  }
+
+  .app-header {
+    @apply absolute #{!important};
+  }
+}
+
+[data-nav-layout="horizontal"][data-menu-position="scrollable"] {
+  .content {
+    @apply mt-[4rem];
+  }
+}

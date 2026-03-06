@@ -1,0 +1,25 @@
+/* Loader Styles */
+[loader=disable] #loader {
+    display: none
+}
+
+/* Loader Styles */
+/* Start:: Loader */
+#loader {
+    position: fixed;
+    top: 0px;
+    inset-inline-start: 0px;
+    z-index: 9999;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+:is(.dark #loader) {
+    background-color: rgb(var(--dark-bg))
+}
+
+/* End:: Loader */

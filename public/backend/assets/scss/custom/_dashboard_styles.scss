@@ -1,0 +1,531 @@
+// Dashboard-1 //
+.total-revenue {
+  @apply flex pt-0 pe-[10px] ps-[10px] flex-none z-0;
+
+  h4 {
+    @apply text-[21px] font-[800] mb-[3px] leading-[1];
+  }
+
+  >div+div {
+    @apply ms-[20px] ps-[20px];
+  }
+
+  label {
+    @apply flex items-center text-[0.875rem];
+
+    span {
+      @apply inline-block w-[9px] h-[9px] me-[5px] rounded-full;
+    }
+  }
+}
+
+
+/*Start:: Dashboard-map*/
+
+.card-dashboard-map-one {
+  #us-map1 {
+    @apply h-[18rem] w-full #{!important};
+
+    g {
+      >path:nth-child(23) {
+        @apply fill-[rgb(249_58_90)] #{!important};
+      }
+
+      >path:nth-child(29) {
+        @apply fill-primary/40 #{!important};
+      }
+
+      >path:nth-child(8) {
+        @apply fill-[rgb(249_58_90)] #{!important};
+      }
+
+      >path:nth-child(6) {
+        @apply fill-[rgb(247_165_86)] #{!important};
+      }
+
+      >path:nth-child(40) {
+        @apply fill-[rgb(247_165_86)] #{!important};
+      }
+
+      >path:nth-child(42) {
+        @apply fill-primary/50 #{!important};
+      }
+
+      >path:nth-child(19) {
+        @apply fill-primary/60 #{!important};
+      }
+    }
+  }
+}
+
+/*End:: Dashboard-map*/
+
+/*Start:: Product Timeline*/
+.product-timeline {
+  ul.timeline-1 {
+    @apply list-none ps-[2rem] relative before:mt-[20px] before:ms-[21px] before:mb-0 before:me-[22px] before:inline-block before:-start-[2px] before:h-[94%] before:z-0 before:absolute before:bottom-0 before:border-s-2 before:border-dotted before:border-defaultborder before:dark:border-defaulttextcolor/10;
+
+    li {
+      @apply my-[21.75px] mx-0 ps-[1rem];
+
+      .product-icon {
+        @apply w-[37px] h-[37px] text-center rounded-full absolute start-[2px] text-[17px] leading-[37px];
+      }
+    }
+  }
+}
+
+/*End:: Product Timeline*/
+
+/*Start:: top countries card*/
+.top-countries-card {
+  @apply border-defaultborder dark:border-defaultborder/10 p-[20px];
+
+  .ti-list-group-item {
+    @apply py-[12px] px-0 border-s-0 border-e-0 border-defaultborder dark:border-defaultborder/10 bg-transparent flex items-center justify-start #{!important};
+
+    span {
+      @apply block ms-auto me-[10px] text-[0.875rem] font-roboto font-bold #{!important};
+    }
+
+    p {
+      @apply mb-0 ms-[10px] text-[0.875rem];
+    }
+  }
+}
+
+/*End:: top countries card*/
+
+/*Start:: Recent Order*/
+.legend {
+  @apply w-[8px] h-[8px] block rounded-none me-[10px] mt-[6px];
+}
+
+.legend-fieldsetlegend {
+  @apply p-0 w-full mb-2 text-base float-left;
+}
+
+
+.sales-info h3 {
+  @apply text-xl font-[700];
+}
+
+/*End:: Recent Order*/
+
+/*start:: table card*/
+.card-table {
+  @apply p-[20px];
+}
+
+.country-table {
+  .table {
+
+    th,
+    td {
+      @apply py-[10px] px-[15px] leading-[1.35] #{!important};
+    }
+
+    &.table-striped>tbody>tr:nth-of-type(odd)>* {
+      @apply text-defaulttextcolor #{!important};
+    }
+  }
+}
+
+.card-table-two,
+.top-countries-card {
+  .card-title {
+    @apply font-[700] uppercase leading-none mb-[10px];
+  }
+}
+
+/*End:: table card*/
+
+#chart div:first-child {
+  @apply mx-auto;
+}
+
+/*Start:: Progress bar*/
+.progress-style {
+  &.progress {
+    @apply overflow-visible #{!important};
+
+    .progress-bar {
+      @apply after:w-[15px] after:h-[15px] after:rounded-full after:bg-white after:dark:bg-bodybg after:absolute after:-end-[5px] after:-top-[5px];
+    }
+
+    .progress-bar {
+      @apply relative overflow-visible #{!important};
+    }
+  }
+
+  &.progress-sm {
+    @apply h-[4px] rounded-none #{!important};
+  }
+
+  .bar-1 {
+    @apply after:border-4 after:border-primary;
+  }
+
+  .bar-2 {
+    @apply after:border-4 after:border-danger;
+  }
+}
+
+/*End:: Progress bar*/
+
+/*Start:: Sales Bar Chart*/
+.sales-bar {
+  @apply min-h-[180px] relative #{!important};
+
+  .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series .apexcharts-bar-area {
+    @apply stroke-transparent #{!important};
+  }
+}
+
+/*End::Sales Bar Chart*/
+
+/*Start:: ORDER STATUS*/
+.total-revenue {
+  h4 {
+    @apply text-[21px] font-bold mb-[3px] font-roboto;
+  }
+
+  ;
+}
+
+@media (max-width: 575.98px) {
+  .total-revenue h4 {
+    @apply text-[12px] #{!important};
+  }
+
+  .total-revenue label {
+    @apply text-[11px] #{!important};
+  }
+}
+
+/*End:: ORDER STATUS*/
+
+#spark1,
+#spark2,
+#spark3,
+#spark4,
+#spark5,
+#spark6 {
+  .apexcharts-grid {
+    line {
+      @apply border-transparent stroke-transparent #{!important};
+    }
+  }
+  .apexcharts-tooltip-text-goals-value, .apexcharts-tooltip-text-y-value, .apexcharts-tooltip-text-z-value {
+   @apply rtl:rotate-180 #{!important};
+  }
+}
+
+.customers {
+  .ti-list-group {
+    .ti-list-group-item {
+      &:hover {
+        @apply bg-light;
+      }
+    }
+  }
+}
+
+.sales-info h3 {
+  @apply text-[21px];
+}
+
+// Dashboard-1 //
+
+// Dashboard-2 //
+.recent-activity {
+  @apply list-none relative before:mt-[20px] before:ms-[21px] before:mb-0 before:me-[22px] before:inline-block before:-start-[2px] before:h-[94%] before:z-0 before:absolute before:bottom-0 before:border-s-2 before:border-dotted before:border-defaultborder before:dark:border-defaulttextcolor/10;
+
+  li {
+    @apply mt-[20px] mx-0;
+  }
+}
+
+#earnings {
+  .apexcharts-menu-icon {
+    @apply hidden #{!important};
+  }
+}
+
+.browser-list {
+  li {
+    @apply mb-5;
+  }
+}
+
+.top-countries {
+  li {
+    @apply mb-6;
+
+    .top-country-name {
+      @apply font-medium text-[.9375rem];
+    }
+  }
+}
+
+.progress.custom-progress-6 .progress-bar .progress-bar-value {
+  @apply absolute -end-[3rem];
+}
+
+.progress.custom-progress-6 {
+  @apply visible bg-transparent;
+}
+
+.crm-lead-legend {
+  @apply relative;
+}
+
+.crm-lead-legend {
+  @apply before:absolute before:top-[0.2rem] before:-start-[0.855rem] before:h-[8px] before:w-[8px] before:rounded-[2px];
+}
+
+.crm-lead-legend.mobile {
+  @apply before:bg-primary;
+}
+
+.crm-lead-legend.desktop {
+  @apply before:bg-danger;
+}
+
+.crm-lead-legend.laptop {
+  @apply before:bg-warning;
+}
+
+#earnings,
+#revenue {
+  .apexcharts-toolbar {
+    @apply hidden #{!important};
+  }
+}
+
+.order-table {
+
+  tbody,
+  td {
+    @apply py-[10px] px-[1.5rem] leading-[1.35] #{!important};
+  }
+}
+
+.browser-list {
+  .custom-progress-3 {
+    @apply h-[0.35rem] #{!important};
+
+    .progress-bar {
+      @apply h-[0.35rem] m-0 before:h-[0.2rem] before:w-[0.2rem] #{!important};
+    }
+  }
+}
+
+// Dashboard-2 //
+
+//dashboard-3//
+.svg-primary {
+  @apply fill-primary;
+}
+
+.svg-danger {
+  @apply fill-danger;
+}
+
+.svg-success {
+  @apply fill-success;
+}
+
+.svg-info {
+  @apply fill-info;
+}
+
+#line-graph1,
+#line-graph2,
+#line-graph3,
+#line-graph4,
+#line-graph5,#bitcoin-price-graph,#etherium-price-graph,#dash-price-graph,#ripple-price-graph,#iota-price-graph,#neo-price-graph{
+  .apexcharts-grid {
+    line {
+      @apply stroke-transparent #{!important};
+    }
+  }
+}
+.currency-select{
+  .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable {
+   @apply pe-[10px] #{!important};
+  }
+  .choices__list--dropdown .choices__item--selectable.is-highlighted::after, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted::after {
+    @apply hidden;
+  }
+  
+}
+//dashbaord-3//
+
+//dashbaord-4//
+#btc-chart,
+#dash-chart,
+#eth-chart,
+#sparkline8 {
+  .apexcharts-grid {
+    line {
+      @apply stroke-transparent #{!important};
+    }
+  }
+}
+
+.card-img-overlay {
+  @apply absolute top-0 right-0 bottom-0 left-0;
+}
+
+.svg-white {
+  @apply fill-white;
+}
+
+.nft-like-section {
+  @apply absolute top-[89px] right-[27px];
+}
+.nft-table{
+.table th, .table td {
+  @apply p-[0.78rem] #{!important};
+}
+}
+#nft-statistics{
+  svg{
+    @apply w-full;
+  }
+}
+//dashbaord-4//
+
+//dashbaord5//
+#analytics-bouncerate,#analytics-visitors,#analytics-sessions,#analytics-views{
+  .apexcharts-grid {
+    line {
+      @apply stroke-transparent #{!important};
+    }
+  }
+}
+#activeusers {
+  .apexcharts-grid {
+    line {
+      @apply stroke-transparent #{!important};
+    }
+  }
+
+  .apexcharts-xaxis-texts-g {
+    text {
+      @apply stroke-white opacity-70 font-normal stroke-[0.2px] #{!important};
+    }
+  }
+}
+
+#sourcechart {
+  .apexcharts-datalabels {
+    text {
+      @apply fill-white text-white #{!important};
+    }
+  }
+}
+
+//dashboard5//
+
+//dashboard6//
+#jobsummery {
+
+  .apexcharts-pie line,
+  .apexcharts-pie circle {
+    stroke: transparent !important;
+  }
+}
+
+//dashboard6//
+
+//dashboard7//
+#compltedprojects,
+#overdueprojects,
+#pendingprojects,
+#totalclients,#totalRevenue {
+  .apexcharts-grid {
+    line {
+      @apply stroke-transparent #{!important};
+    }
+  }
+}
+#totalclients{
+  @apply relative top-[12px] min-h-[100px] #{!important};
+}
+.project-list {
+  @apply relative list-none m-0 p-0 before:absolute before:top-[4px] before:bottom-0 before:h-[90%] before:start-[9px] before:border-s before:border-dashed before:border-defaultborder before:dark:border-defaultborder/10;
+
+  li {
+    @apply mb-[29px] ps-[40px] relative;
+    .task-icon {
+      @apply absolute start-[2px] top-[5px] w-[15px] h-[15px] z-[2] rounded-full bg-transparent p-[2px] border-[3px];
+    }
+  }
+}
+
+
+//dashboard7//
+
+//dashboard8//
+#vacancystatus{
+  .apexcharts-toolbar {
+      @apply hidden #{!important};
+  }
+}
+//dashboard8//
+
+//dashboard9//
+#apple-stock,
+#nvida-stock,
+#tesla-stock,
+#amazon-stock,
+#ali-stock,
+#samsong-stock,#investiments,#totalInvestmentsStats{
+  .apexcharts-grid {
+    line {
+      @apply stroke-transparent #{!important};
+    }
+  }
+}
+//dashboard9//
+#coursescompleted{
+.apexcharts-toolbar{
+  @apply hidden #{!important};
+}
+.apexcharts-bar-series.apexcharts-plot-series .apexcharts-series .apexcharts-bar-area {
+  @apply stroke-white dark:stroke-bodybg #{!important};
+}
+}
+#accesstime,#totalusers,#totalearning,#totalvedio{
+  .apexcharts-grid {
+    line {
+      @apply stroke-transparent #{!important};
+    }
+  }
+}
+.coursetable{
+  table{
+    tbody{
+      tr{
+        td{
+          @apply py-[15px] #{!important};
+        }
+      }
+    }
+  }
+}
+.category-link {
+  @apply flex flex-col items-center justify-center rounded-md border border-defaultborder dark:border-defaultborder/10 p-[1.2rem];
+  .category-svg {
+    @apply mb-4 h-[1.875rem] w-[1.875rem];
+  }
+}
+
+.timeline-widget{
+  @apply relative before:absolute before:top-0 before:h-full before:w-[0.125rem] before:bg-defaultborder dark:before:bg-defaultborder/10 before:start-[3rem];
+  .timeline-widget-list{
+    @apply relative  before:absolute before:h-3 before:w-3 before:rounded-full before:border before:border-defaultborder dark:before:border-defaultborder/10 before:bg-light before:start-[2.688rem];
+}
+}

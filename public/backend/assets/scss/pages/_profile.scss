@@ -1,0 +1,403 @@
+/* Start:: profile */
+.main-header-profile .main-img-user {
+  @apply after:absolute after:bottom-0 after:end-[6px] after:w-[6px] after:h-[6px] after:bg-[#17b86a] after:shadow-[0_0_0_2px_rgba(255_255_255_0.95)] after:rounded-full after:block after:top-[35px];
+  }
+  
+  .main-profile-menu .profile-user img {
+    @apply w-[37px] h-[37px] rounded-full ms-0;
+  }
+  
+  .main-profile-overview .main-img-user{
+    @apply after:hidden #{!important};
+  }
+  
+  .main-content-profile {
+    @apply flex-1;
+  }
+  
+  @media (max-width: 991.98px) {
+    .main-content-profile {
+      .container, .container-fluid {
+        @apply block;
+      }
+    }
+  }
+  
+
+@media (max-width: 576px) {
+  .profile.navtab-custom {
+    @apply pt-[11px] px-0 pb-0 w-full #{!important};
+    li {
+      @apply flex w-full rounded-none;
+
+      a {
+        @apply rounded-none w-full me-0 rounded-tl-none rounded-tr-none;
+      }
+    }
+  }
+}
+  
+  .main-content-left-profile {
+    @apply ps-0 pe-0 block border-b border-b-defaultborder pb-[25px] w-auto;
+  }
+  
+  @media (min-width: 992px) {
+    .main-content-left-profile {
+      @apply w-[270px] pe-[20px] pb-0 border-e border-e-defaultborder border-t-0;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .main-content-left-profile {
+      @apply pe-[25px];
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1024) {
+    .main-profile-social-list .media-body {
+      @apply ms-[12px];
+    }
+  }
+  
+  .main-profile-overview {
+    .main-img-user {
+      @apply w-[132px] h-[132px] mb-[20px];
+      &.user-profile {
+        @apply w-[120px] h-[120px];
+      }
+    }
+  
+    .btn-icon-list {
+      .btn, .sp-container button {
+        @apply rounded-full;
+      }
+    }
+  }
+  
+  .sp-container .main-profile-overview .btn-icon-list button {
+    @apply rounded-full;
+  }
+  
+  .main-profile-name {
+    @apply font-[700] text-[20px] mb-[2px];
+  }
+  
+  .main-profile-name-text {
+    @apply text-[13px] mb-0;
+  }
+  
+  .main-profile-bio {
+    @apply text-[13px] mb-[20px];
+  }
+  
+  .main-profile-social-list {
+    .media {
+      @apply items-center;
+  
+      + .media {
+        @apply mt-[20px];
+      }
+    }
+  
+    .media-icon {
+      @apply text-[34px] w-[30px] leading-[0];
+    }
+  
+    .media-body {
+      @apply ms-[20px];
+  
+      span {
+        @apply block text-[12px];
+      }
+  
+      a {
+        @apply text-[13px];
+      }
+    }
+  }
+  
+  .main-content-body-profile {
+    .nav {
+      @apply flex-col py-[20px] ps-[20px] pe-0 border-b border-b-defaultborder mb-[1.3rem];
+    }
+  
+    .main-nav-line .nav-link {
+      @apply uppercase text-[13px] font-medium text-gray-800;
+  
+      &.active {
+        @apply font-[700] text-primary;
+  
+        &::before {
+          @apply bg-primary;
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .main-content-body-profile .nav {
+      @apply flex-row items-center;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .main-content-body-profile .nav {
+      @apply ps-[20px];
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .main-content-body-profile .nav {
+      @apply ps-[25px];
+    }
+  }
+  
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .main-content-body-profile .main-nav-line .nav-link.active{
+      @apply before:top-[37px] before:-bottom-[20px] before:start-0 before:end-0 before:h-[2px] before:w-auto;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .main-content-body-profile .main-nav-line .nav-link {
+      @apply pb-[3px];
+    }
+  }
+  
+  
+  .main-profile-body {
+    @apply pt-[15px] px-0 pb-0;
+  }
+  
+  @media (min-width: 576px) {
+    .main-profile-body {
+      @apply pt-[20px];
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .main-profile-body {
+      @apply pt-[25px] pb-0 ps-0 pe-[20px];
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .main-profile-body {
+      @apply ps-[25px];
+    }
+  }
+  
+  .main-profile-view-chart {
+    @apply relative w-[calc(100%-10px)] h-[200px];
+  }
+  
+  @media (min-width: 375px) {
+    .main-profile-view-chart {
+      @apply w-full;
+    }
+  }
+  
+  @media (min-width: 576px) {
+    .main-profile-view-chart {
+      @apply h-[250px] ;
+    }
+  }
+  
+  .main-profile-view-info {
+    @apply absolute top-0 start-0;
+  
+    h6 {
+      @apply text-[32px] font-medium text-gray-900 mb-0;
+    }
+  
+    span {
+      @apply text-[12px] text-pinkmain ms-[5px];
+    }
+  
+    p {
+      @apply text-[13px] mb-0;
+    }
+  }
+  
+  .main-traffic-detail-item {
+    > div:first-child {
+      @apply flex items-center justify-between text-[12px] mb-[7px];
+  
+      > span {
+        &:first-child {
+          @apply text-gray-600;
+        }
+  
+        &:last-child {
+          @apply text-[11px] font-[700] text-gray-900;
+          span {
+            @apply text-gray-600 font-normal;
+          }
+        }
+      }
+    }
+  
+    + .main-traffic-detail-item {
+      @apply mt-[25px];
+    }
+  
+    .progress {
+      @apply h-[8px];
+    }
+  }
+  
+  .main-profile-work-list {
+    .media + .media {
+      @apply mt-[25px];
+    }
+  
+    .media-logo {
+      @apply w-[40px] h-[40px] flex items-center justify-center leading-[0] text-white text-[21px] relative top-[2px] rounded-full;
+    }
+  
+    .media-body {
+      @apply ms-[20px];
+  
+      h6 {
+        @apply text-gray-900 font-medium mb-[2px];
+      }
+  
+      span {
+        @apply block mb-[5px];
+      }
+  
+      p {
+        @apply mb-0 text-[12px] text-gray-600;
+      }
+    }
+  }
+  
+  .main-profile-contact-list {
+    .media {
+      @apply items-center;
+  
+      + .media {
+        @apply mt-[25px];
+      }
+    }
+  
+    .media-icon {
+      @apply leading-[0] text-[36px] w-[35px] text-center;
+    }
+  
+    .media-body {
+      @apply ms-[25px];
+  
+      span {
+        @apply text-[12px] block leading-[1.3];
+      }
+  
+      div {
+        @apply font-medium;
+      }
+    }
+  }
+  
+  @media (max-width: 1134px) {
+    .main-profile-body .media.profile-footer {
+      @apply block #{!important};
+  
+      .media-body {
+        @apply pt-[3px] px-0 pb-[15px];
+      }
+    }
+  }
+  
+  @media (max-width: 578px) {
+    .main-profile-menu .profile-user img {
+      @apply ms-0;
+    }
+  }
+  
+  .main-profile-work-list .media-logo, .main-profile-contact-list .media-icon, .main-profile-social-list .media-icon {
+    @apply w-[40px] h-[40px] flex items-center justify-center leading-[0] text-white text-[21px] relative top-[2px] rounded-full;
+  }
+  
+  .profile-user .profile-edit {
+    @apply absolute w-[30px] h-[30px] rounded-full leading-[28px] end-0 top-0 text-primary bg-light border border-white my-0 mx-auto shadow-[0_1px_2px_[#0000006e]] text-center;
+  }
+  
+  .main-profile-body .card-header {
+    @apply pt-0 ps-0;
+  }
+  
+  .drop-down-profile {
+    @apply relative;
+  }
+  
+  .profile-footer a {
+    @apply w-[34px] h-[34px] bg-white text-black my-[1px] mx-auto leading-[34px] inline-block rounded-full text-[12px];
+  }
+  
+  .drop-down-profile span.assigned-task {
+    @apply absolute text-[12px] w-[18px] h-[18px] leading-[18px] text-white top-0 mx-0 my-auto text-center rounded-full end-0;
+  }
+  
+  @media (max-width: 575px) {
+    .main-content-body-profile .main-nav-line .nav-link.active{
+      @apply before:start-0;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .main-profile-menu .profile-user img {
+      @apply ms-0 #{!important};
+    }
+  }
+  
+  .profile-name {
+    @apply mt-[8px];
+  }
+  
+  .profile.navtab-custom {
+    @apply pt-[11px] px-0 pb-[10px];
+  
+    li a {
+      @apply p-[13px] text-black bg-transparent me-[7px] rounded-tl-[7px] rounded-tr-[7px] border border-defaultborder border-b-0 text-[13px];
+    }
+  
+    .active a, a.active {
+      @apply bg-defaultbackground border-b-0 text-black;
+    }
+  }
+  
+  .ga-border {
+    @apply h-[3px] w-[40px] bg-primary mt-[10px] mx-auto mb-[5px];
+  }
+  
+  .todo-widget-header {
+    .dropdown-menu-start {
+      @apply shadow-none;
+    }
+    
+    .main-header-profile {
+      @apply py-[8px] px-[2px];
+      span {
+        @apply text-inherit;
+      }
+    }
+  }
+
+  .main-content-label {
+    @apply font-[700] uppercase leading-none mb-[10px]  text-defaulttextcolor;
+}
+.counter-icon {
+  @apply mb-0 inline-flex w-[4rem] h-[4rem] py-[1.3rem] px-[1.4rem] rounded-full text-center;
+  i {
+    @apply text-[22px];
+  }
+}
+
+.user-lock img {
+  @apply w-[70px] h-[70px] my-0 mx-auto #{!important};
+}
+
+.bxl-instagram.tx-prime, .bxl-linkedin.tx-prime, .bxl-twitter.tx-prime, .bxl-facebook.tx-prime {
+  @apply text-primary block text-[18px] relative leading-[35px] outline-none h-[37px] w-[37px] bg-transparent m-auto text-center border border-defaultborder shadow-none rounded-[35px];
+}
+/* End:: profile */

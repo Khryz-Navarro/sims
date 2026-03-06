@@ -1,0 +1,162 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+Project                        :    Valex - HTML5 Tailwind Admin Template
+
+Created Date                   :   21/04/2023
+
+Author & Copyright Ownership   :   Spruko Technologies Private Limited 
+
+Author URL                     :   https://themeforest.net/user/spruko
+
+Support	                       :   https://support.spruko.com/
+
+License Details                :   https://spruko.com/licenses-details
+
+-------------------------------------------------------------------*/
+/*------------------- Start Table of Content 
+
+FontFamily
+Tailwind
+Variables
+Icons
+authentication
+dashboard_styles
+error
+header
+landing
+timeline
+closed_menu
+double_menu
+horizontal
+icon_click
+icon_hover
+menu_click
+menu_hover
+switcher
+vertical
+chat
+ecommerce
+file-manager
+mail
+pages_styles
+profile
+task
+calender
+datatables
+sweetalerts
+plugins
+swiper
+bg-img-styles
+boxed
+classic-page-styles
+detached_menu
+header-scrollable
+header-styles
+icon_overley
+icontext
+menu-scrollable
+menu-styles
+loader
+accordion
+alerts
+avatars
+breadcrumb
+buttons
+cards
+carousels
+charts
+components
+custom
+dropdown
+forms
+modal
+offcanvas
+pagination
+progress
+tables
+tailwind
+tooltip
+toast
+trypography
+-------------------*/
+
+/* Start FontFamily Styles */
+
+/* inter */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+
+/* Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+
+/* NotoSans */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+/* End Tailwind Styles Styles */
+
+@import "./tailwind/tailwind";
+
+@import "./variables";
+@import "./icons";
+
+@import "./custom/authentication";
+@import "./custom/dashboard_styles";
+@import "./custom/error";
+@import "./custom/header";
+@import "./custom/landing";
+@import "./custom/timeline.scss";
+
+@import "./layout/closed_menu";
+@import "./layout/double_menu";
+@import "./layout/horizontal";
+@import "./layout/icon_click";
+@import "./layout/icon_hover";
+@import "./layout/menu_click";
+@import "./layout/menu_hover";
+@import "./layout/vertical";
+
+@import "./pages/chat";
+@import "./pages/ecommerce";
+@import "./pages/file-manager";
+@import "./pages/mail";
+@import "./pages/pages_styles";
+@import "./pages/profile";
+@import "./pages/task";
+
+@import "./plugins/calendar";
+@import "./plugins/datatable";
+@import "./plugins/sweetalert";
+@import "./plugins/plugins.scss";
+@import "./plugins/swiper.scss";
+
+@import "./switcher/bg-img-styles";
+@import "./switcher/boxed";
+@import "./switcher/classic-page-style";
+@import "./switcher/detached_menu";
+@import "./switcher/header-scrollable";
+@import "./switcher/header-styles";
+@import "./switcher/icon-overlay";
+@import "./switcher/icontext";
+@import "./switcher/menu-scrollable";
+@import "./switcher/menu-styles";
+@import "./switcher/loader.scss";
+
+@import "./tailwind/accordion";
+@import "./tailwind/alerts";
+@import "./tailwind/avatars.scss";
+@import "./tailwind/breadcrumb";
+@import "./tailwind/buttons";
+@import "./tailwind/cards";
+@import "./tailwind/carousels.scss";
+@import "./tailwind/components";
+@import "./tailwind/custom";
+@import "./tailwind/dropdown";
+@import "./tailwind/forms";
+@import "./tailwind/modal";
+@import "./tailwind/offcanvas";
+@import "./tailwind/pagination";
+@import "./tailwind/progress";
+@import "./tailwind/tables";
+@import "./tailwind/tooltip";
+@import "./tailwind/toast.scss";
+@import "./tailwind/typography.scss";

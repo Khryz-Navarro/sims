@@ -1,0 +1,8 @@
+/* Start::Blockquote */
+.blockquote-container {
+    @apply p-5 border border-solid border-primary border-s-4 rounded-sm relative before:absolute before:w-2 before:h-2 before:text-sm before:font-semibold before:border before:border-solid before:border-primary;
+}
+
+.blockquote .custom-blockquote {
+    @apply text-sm font-semibold p-4 rounded-md relative before:z-0 before:text-[4rem] before:absolute before:-start-1 before:-top-6;
+}

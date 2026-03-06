@@ -1,0 +1,81 @@
+/* Start Classic-Page Styles */
+[data-page-style="classic"] {
+  body {
+    @apply bg-white dark:bg-bodybg;
+  }
+
+  .box {
+    @apply shadow-none shadow-transparent border;
+  }
+
+  &.dark {
+    body {
+      @apply bg-bodybg;
+    }
+    .box {
+      @apply shadow-none shadow-transparent border border-defaultborder/10;
+    }
+    &[data-width="boxed"] {
+      .page {
+        @apply bg-bodybg #{!important};
+      }
+    }
+  }
+  &[data-width="boxed"] {
+    .page {
+      @apply bg-white bg-bodybg #{!important};
+    }
+  }
+}
+
+
+/* End Classic-Page Styles */
+
+// page styles modern start
+[data-page-style="modern"] {
+  --light: 255, 255, 255;
+  --custom-white: rgb(243, 246, 248);
+  // --default-border: white/10;
+  --input-border: rgba(0, 0, 0, 0.1);
+  .dropdown-menu {
+    @apply bg-white;
+  }
+  body {
+    @apply bg-white;
+  }
+  .box{
+    @apply shadow-none bg-[#f3f6f8];
+  }
+  &[class="dark"] {
+    --light: 20, 20, 20;
+    --custom-white: rgb(var(--body-bg));
+    // --default-border: black/10;
+    .box{
+      @apply shadow-none bg-bodybg;
+    }
+    .dropdown-menu {
+      @apply bg-light;
+    }
+    body {
+      @apply bg-bodybg;
+    }
+    .ti-btn-light {
+      @apply bg-black/10 border-black/10 #{!important};
+      &:hover,
+      &:focus,
+      &:active {
+        @apply bg-black/10 border-black/10 #{!important};
+      }
+    }
+  }
+  footer{
+   @apply bg-[#f3f6f8];  
+  }
+  .app-sidebar,
+  .footer,
+  .app-header,
+  .app-sidebar .main-sidebar {
+    @apply shadow-none;
+  }
+}
+// page styles modern end

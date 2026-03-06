@@ -1,0 +1,20 @@
+.mySwiper1 .swiper-button-next:after,
+.mySwiper1 .swiper-button-prev:after {
+    font-size: 1.5rem !important;
+    font-weight: 300 !important;
+    --tw-text-opacity: 1 !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important
+}
+.mySwiper1 .swiper-button-next,
+.mySwiper1 .swiper-button-prev {
+    background-color: transparent !important
+}
+.mySwiper1 .swiper-pagination-bullet {
+    height: 3px;
+    width: 30px;
+    border-radius: 0;
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity))
+}

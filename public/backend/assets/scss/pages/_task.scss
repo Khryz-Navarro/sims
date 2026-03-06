@@ -1,0 +1,98 @@
+/* Start::task-kanboard-board */
+.valex-kanban-board {
+    @apply flex overflow-x-auto items-stretch mb-3 pb-4;
+    .kanban-tasks-type {
+        @apply min-w-[20rem] me-2;
+    }
+    // .task-image {
+    //     .kanban-image {
+    //         @apply h-[150px] w-full;
+    //     }
+    // } 
+    .kanban-content {
+        @apply mt-3;
+    }
+    .kanban-task-description {
+        @apply text-textmuted text-[0.82rem];
+    }
+    .kanban-tasks-type {
+        &.new {
+            .kanban-tasks.box {
+                @apply border-s-[3px] border-solid border-s-primary/30;
+            }
+            .new-heading{
+                    @apply ms-3 before:-ms-[11px] before:mt-[4px] before:content-[""] before:absolute before:w-[3px] before:h-[15px] before:rounded-md before:bg-primary;
+            }
+        }
+        &.todo {
+            .kanban-tasks.box {
+                @apply border-s-[3px] border-solid border-s-warning/30;
+            }
+            .todo-heading{
+                @apply ms-3 before:-ms-[11px] before:mt-[4px] before:content-[""] before:absolute before:w-[3px] before:h-[15px] before:rounded-md before:bg-warning;
+        }
+        }
+        &.in-progress {
+            .kanban-tasks.box {
+                @apply border-s-[3px] border-solid border-s-info/30;
+            }
+            .proccess-heading{
+                @apply ms-3 before:-ms-[11px] before:mt-[4px] before:content-[""] before:absolute before:w-[3px] before:h-[15px] before:rounded-md before:bg-info;
+        }
+        }
+        &.inreview {
+            .kanban-tasks.box {
+                @apply border-s-[3px] border-solid border-s-danger/30;
+            }
+            .review-heading{
+                @apply ms-3 before:-ms-[11px] before:mt-[4px] before:content-[""] before:absolute before:w-[3px] before:h-[15px] before:rounded-md before:bg-danger;
+        }
+        }
+        &.completed {
+            .kanban-tasks.box {
+                @apply border-s-[3px] border-solid border-s-success/30;
+            }
+            .complted-heading{
+                @apply ms-3 before:-ms-[11px] before:mt-[4px] before:content-[""] before:absolute before:w-[3px] before:h-[15px] before:rounded-md before:bg-success;
+        }
+        }
+    }
+    #new-tasks,#todo-tasks,#inprogress-tasks,#inreview-tasks,#completed-tasks {
+        .box:last-child {
+            @apply mb-0;
+        }
+    }
+    #new-tasks,#todo-tasks,#inprogress-tasks,#inreview-tasks,#completed-tasks {
+        @apply relative max-h-[35rem];
+        .simplebar-content {
+            @apply pt-0 pb-4 px-0;
+        }
+    }
+    .task-Null {
+        @apply relative min-h-[12.5rem] before:absolute before:inset-0 before:bg-white before:rounded-md before:bg-[url('../images/media/media-83.svg')] before:bg-cover before:bg-center before:h-[12.5rem]
+        before:w-full before:my-0 before:mx-auto;
+    }
+}
+/* end::task-kanboard-board */
+
+/* Start::task-details */
+.task-title {
+    @apply relative start-4 before:absolute before:w-2 before:h-2 before:-start-4 before:top-2 before:rounded-full before:bg-secondary;
+}
+.task-details-key-tasks {
+    @apply list-decimal;
+    li {
+        @apply mb-2 text-[0.875rem] text-[#8c9097];
+        &:last-child {
+            @apply mb-0;
+        }
+    }
+}
+.task-description {
+    @apply text-[0.875rem];
+}
+.task-details-progress {
+    @apply w-[6.25rem];
+}
+
+/* End::task-details */

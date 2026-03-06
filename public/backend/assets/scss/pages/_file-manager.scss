@@ -1,0 +1,50 @@
+/* Start:: file-manager */
+.main-content-left-mail {
+    .btn-compose {
+        @apply mb-[20px] uppercase font-medium text-[11px] py-0 px-[20px] flex items-center justify-center h-[38px];
+    }
+}
+
+.main-nav-column {
+    @apply flex-col;
+}
+
+.main-nav-column {
+    .nav-link {
+        @apply p-0 h-[38px] text-gray-700 flex font-normal items-center ;
+        &.active {
+            @apply relative text-primary #{!important};
+        }
+        &.active, &:hover {
+            @apply bg-transparent;
+          }
+        i {
+            @apply text-[18px] leading-[0] w-[24px] me-[12px] text-center transition-all ease-in-out duration-[0.2s];
+        }
+    }
+}
+@media (min-width: 992px) {
+    .main-mail-menu .nav-link {
+        @apply text-[14px];
+    }
+}
+.main-mail-menu {
+    .nav-link {
+        @apply h-[38px];
+        i {
+            @apply text-[17px];
+        }
+    }
+}
+.file-manager-icon {
+    @apply w-[30px] h-[30px];
+}
+.file-manger-icon img {
+    @apply w-[70px] h-[70px];
+}
+[dir="rtl"]{
+    .file-details-card {
+        @apply dir-rtl;
+    }
+}
+/* End:: file-manager */

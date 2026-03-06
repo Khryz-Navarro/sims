@@ -1,0 +1,686 @@
+/* Start Landing Styles */
+.landing-body .landing-main-image img {
+  @apply z-[11] relative w-[26.063rem] h-[26.063rem] bg-black/[0.05] rounded-full before:absolute before:w-[24.5rem] before:h-[24.5rem] before:bg-black/10 before:opacity-[0.3] before:start-[5rem] before:top-[0rem] before:rounded-full after:absolute after:w-[12.5rem] after:h-[12.5rem] after:bg-transparent after:border-primary/50 after:opacity-[0.3] after:start-[5.1rem] after:bottom-[4.4rem];
+}
+
+[data-nav-layout="horizontal"] {
+  @media (min-width: 991.98px) {
+    &[class="dark"] {
+      .landing-body {
+        .app-sidebar.sticky {
+          @apply bg-primary/10 #{!important};
+
+          .app-sidebar .side-menu__item:hover .side-menu__angle {
+            color: #fff !important;
+          }
+
+          .side-menu__item {
+
+            &.active,
+            &:hover {
+              @apply text-white #{!important};
+
+              .side-menu__label,
+              .side-menu__angle {
+                @apply text-defaulttextcolor #{!important};
+              }
+            }
+          }
+        }
+
+        .app-sidebar.sticky.sticky-pin {
+          @apply bg-bodybg #{!important};
+        }
+      }
+    }
+
+    .landing-body {
+      .app-sidebar.sticky {
+        .landing-logo-container {
+          .responsive-logo-dark {
+            img {
+              @apply block #{!important};
+            }
+          }
+
+          .responsive-logo-light {
+            img {
+              @apply hidden #{!important};
+            }
+          }
+        }
+      }
+
+      .app-sidebar.sticky.sticky-pin {
+        .landing-logo-container {
+          .responsive-logo-dark {
+            img {
+              @apply hidden #{!important};
+            }
+          }
+
+          .responsive-logo-light {
+            img {
+              @apply block #{!important};
+            }
+          }
+        }
+
+        .side-menu__angle {
+          @apply text-[#536485] hover:text-[#536485] dark:text-defaulttextcolor/10 #{!important};
+        }
+
+        .side-menu__item {
+
+          &.active,
+          &:hover {
+            @apply text-primary #{!important};
+
+            .side-menu__label,
+            .side-menu__angle {
+              @apply text-primary #{!important};
+            }
+          }
+        }
+      }
+    }
+
+    .landing-body {
+      .app-sidebar .side-menu__item:hover .side-menu__angle {
+        color: #fff !important;
+      }
+
+      .app-sidebar {
+        @apply bg-primary/10 dark:bg-primary/10 py-4;
+
+        .side-menu__item {
+
+          .side-menu__label,
+          .side-menu__angle {
+            @apply text-white dark:text-defaulttextcolor/10 #{!important};
+          }
+        }
+
+        .slide.has-sub.open {
+          .slide-menu {
+
+            &.child1,
+            &.child2,
+            &.child3 {
+              @apply bg-white dark:bg-bodybg #{!important};
+
+              .slide .side-menu__item {
+                .side-menu__angle {
+                  @apply text-[#536485] dark:text-defaulttextcolor/10 #{!important};
+                }
+
+                &:hover,
+                &.active {
+                  @apply text-[#536485] dark:text-defaulttextcolor/10 #{!important};
+
+                  .side-menu__angle {
+                    @apply text-[#536485] dark:text-defaulttextcolor/10 #{!important};
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .side-menu__item {
+          @apply rounded-sm p-[0.3rem];
+        }
+
+        .slide-menu.child1 {
+          @apply rounded-sm py-[0.55rem] px-[0.3rem];
+        }
+
+        .slide-menu.child1 .side-menu__item {
+          @apply py-[0.33rem] px-[1.6rem];
+        }
+
+        .slide.has-sub.open .slide-menu.child1 {
+          @apply overflow-visible dark:bg-bodybg dark:text-defaulttextcolor/70 text-defaulttextcolor start-auto hover:text-white active:text-white before:absolute before:-top-[7px] before:start-[10%] before:w-[13px] before:h-[13px] before:z-[99999] before:border before:border-solid before:border-transparent before:rotate-45 before:bg-white dark:before:bg-bodybg #{!important};
+        }
+
+        .slide.has-sub .slide-menu {
+          @apply start-auto #{!important};
+        }
+
+        .side-menu__item {
+          @apply pe-[1.3rem] ps-[1.3rem] text-[#536485];
+        }
+
+        .side-menu__item.active,
+        .side-menu__item:hover {
+          @apply bg-transparent text-defaulttextcolor hover:text-white active:text-white #{!important};
+        }
+
+        .slide-menu.child1 .slide .side-menu__item:before {
+          @apply top-[0.838rem] start-[0.65rem] #{!important};
+        }
+
+        .side-menu__item:hover .side-menu__angle {
+          @apply text-[#536485];
+        }
+      }
+
+      .app-sidebar.sticky.sticky-pin {
+        .side-menu__label {
+          @apply text-defaulttextcolor dark:text-white #{!important};
+        }
+
+        .side-menu__item {
+
+          &.active,
+          &:hover {
+            @apply text-primary #{!important};
+
+            .side-menu__label,
+            .side-menu__angle {
+              @apply text-defaulttextcolor;
+            }
+          }
+        }
+      }
+    }
+
+    .landing-body .app-sidebar .sticky {
+      @apply top-0 px-0 h-auto bg-primary/10 dark:bg-primary/10 shadow-none border-e-0 #{!important};
+    }
+
+    .landing-body .app-sidebar .main-sidebar {
+      @apply h-auto #{!important};
+    }
+
+    .landing-body .app-sidebar.sticky.sticky-pin {
+      @apply bg-white dark:bg-bodybg #{!important};
+    }
+  }
+
+
+  .landing-body {
+    .app-sidebar {
+      .side-menu__item {
+        @apply py-[0.8rem] px-4;
+
+        &.active,
+        &:hover {
+          @apply text-white dark:text-defaulttextcolor/10;
+        }
+      }
+    }
+
+    .contact-icon {
+      @apply w-[2.75rem] h-[2.75rem] flex items-center justify-center;
+    }
+
+    .app-sidebar .sticky.sticky-pin .side-menu__item.active {
+      @apply font-normal;
+
+      .side-menu__label {
+        @apply text-defaulttextcolor #{!important};
+      }
+    }
+
+    .accordion.accordion-primary .accordion-button.collapsed:after {
+      @apply bg-white dark:bg-bodybg text-primary #{!important};
+    }
+
+    .landing-banner {
+      @apply relative w-full h-[37rem] top-0 bg-[url('../images/media/landing/banner.jpg')] bg-cover bg-center bg-no-repeat before:absolute before:w-full before:h-full before:bg-primary before:opacity-70;
+
+      .main-banner-container {
+        @apply pb-[4rem] pt-[6rem] px-[3rem];
+      }
+
+      .landing-banner-heading {
+        @apply leading-[1.25] text-[3rem] font-[600] text-white dark:text-defaulttextcolor/10;
+      }
+    }
+
+    .main-menu-container .main-menu {
+      @apply ps-0;
+    }
+
+    .content {
+      @apply mt-[4rem];
+    }
+
+    .section {
+      @apply py-[3.375rem] px-0 bg-cover relative;
+    }
+
+    // .section-bg {
+    //   @apply bg-[#f9fafb] dark:bg-black/10 #{!important};
+    // }
+    .featur-icon {
+      @apply w-[75px] h-[75px] p-[14px] rounded-full bg-white/[0.05] my-0 mx-auto;
+    }
+
+    .feature-logos {
+      @apply flex justify-center;
+    }
+
+    .landing-Features {
+      @apply relative w-full h-full top-0 bg-[url('../images/media/landing/2.jpg')] bg-cover bg-center bg-no-repeat z-[9] before:absolute before:w-full before:h-full before:top-0 before:-z-[1] before:bg-primary/95;
+    }
+
+    .landing-testimonials .swiper-pagination-bullet {
+      @apply bg-primary #{!important};
+
+      &:active {
+        @apply bg-primary #{!important};
+      }
+    }
+
+    .landing-section-heading {
+      @apply relative text-[0.813rem] text-primary font-[600] before:absolute before:w-[60%] before:h-[0.25rem] before:bg-gradient-to-r before:from-primary before:to-primary/10 before:opacity-[0.5] before:-top-[0.625rem] before:rounded-[3.125rem] before:end-0;
+
+    }
+
+    .customize-image img {
+      @apply w-[30.5rem] h-[20rem] mt-[20px] p-[15px] relative;
+    }
+
+    h3 {
+      @apply text-[1.75rem];
+    }
+
+    .team-card .team-avatar {
+      @apply shadow-[0_0_0_rgba(0_0_0_0.05)] #{!important};
+    }
+
+    .landing-footer {
+      @apply bg-black border-b border-solid border-white/10 #{!important};
+    }
+
+    .landing-main-footer {
+      @apply bg-black;
+    }
+
+    .landing-footer-list li {
+      @apply mb-2;
+    }
+
+    .brand-img-white {
+      @apply block;
+    }
+
+    .swiper-pagination-bullet {
+      @apply w-[1.25rem] h-[0.25rem] rounded-md bg-white dark:bg-bodybg #{!important};
+    }
+
+    .brand-img-light {
+      @apply block;
+    }
+
+    @media (min-width: 991.98px) {
+      .app-sidebar {
+        @apply top-0 px-0 h-auto shadow-none border-0 #{!important};
+
+        .side-menu__label {
+          @apply text-white dark:text-defaulttextcolor/10 opacity-[0.8];
+        }
+
+        .main-sidebar {
+          @apply h-auto #{!important};
+        }
+
+
+
+        .side-menu__item {
+          .side-menu__angle {
+            @apply text-[#536485];
+          }
+
+          &:hover {
+            .side-menu__angle {
+              @apply text-white dark:text-defaulttextcolor/10;
+            }
+          }
+        }
+
+        &.app-sidebar .side-menu__label {
+          @apply text-white dark:text-defaulttextcolor/10;
+        }
+
+        .landing-logo-container .horizontal-logo {
+          .desktop-white {
+            @apply hidden;
+          }
+
+          .desktop-logo {
+            @apply block;
+          }
+        }
+
+        &.app-sidebar .side-menu__item:hover {
+          .side-menu__label {
+            @apply text-white dark:text-defaulttextcolor/10;
+          }
+        }
+
+
+      }
+
+      .app-header {
+        @apply hidden;
+      }
+
+      .main-sidebar-header {
+        @apply block #{!important};
+      }
+
+      .main-menu-container {
+        @apply flex items-center justify-between;
+
+        .slide-left,
+        .slide-right {
+          @apply hidden;
+        }
+      }
+
+      .main-content {
+        @apply p-0;
+      }
+
+      .landing-logo-container {
+        .horizontal-logo .header-logo {
+          .desktop-logo {
+            @apply hidden;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 991.98px) {
+
+      .app-sidebar .side-menu__item.active,
+      .app-sidebar .side-menu__item:hover {
+        @apply bg-transparent;
+      }
+
+      .main-menu-container .main-menu {
+        @apply ps-[0px] pt-[20px] #{!important};
+      }
+
+      .app-sidebar {
+        .slide {
+          @apply p-0;
+        }
+      }
+
+      .landing-logo-container {
+        .horizontal-logo .header-logo {
+          .desktop-logo {
+            @apply hidden #{!important};
+          }
+
+          .desktop-white {
+            @apply hidden #{!important};
+          }
+        }
+      }
+    }
+
+    @media (max-width:767.98px) {
+      .landing-main-image {
+        @apply hidden;
+      }
+
+      .landing-body {
+        .landing-banner {
+          @apply h-[45rem] #{!important};
+
+          .main-banner-container {
+            @apply p-4;
+          }
+        }
+      }
+    }
+
+    @media (max-width:400px) {
+      .landing-body .landing-banner {
+        @apply h-[45rem];
+      }
+    }
+
+    @media (max-width: 480px) {
+      .landing-banner {
+        .section {
+          @apply py-[2.375rem] px-0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .landing-body .landing-banner {
+      @apply h-[37.5rem];
+
+      .main-banner-container {
+        @apply p-4;
+      }
+
+      .landing-banner-heading {
+        @apply text-[2rem];
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .landing-body {
+      .app-sidebar .side-menu__item {
+        @apply py-[1rem] pr-[5rem] pl-[2.5rem] #{!important};
+      }
+
+      .landing-banner {
+        @apply h-[45rem] #{!important};
+      }
+
+      .app-sidebar .side-menu__label {
+        @apply text-defaulttextcolor dark:text-defaulttextcolor/70 #{!important};
+      }
+
+      .slide.has-sub.open {
+        .slide-menu {
+
+          &.child1,
+          &.child2,
+          &.child3 {
+            .slide .side-menu__item {
+              @apply pl-[4rem] before:start-[45px] #{!important};
+
+              .side-menu__angle {
+                @apply text-defaulttextcolor dark:text-defaulttextcolor/70 #{!important};
+              }
+
+              &:hover,
+              &.active {
+                @apply text-defaulttextcolor dark:text-defaulttextcolor/70 #{!important};
+
+                .side-menu__angle {
+                  @apply text-defaulttextcolor dark:text-defaulttextcolor/70 #{!important};
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .app-sidebar .slide-menu.child1 li,
+      .app-sidebar .slide-menu.child2 li,
+      .app-sidebar .slide-menu.child3 li {
+        @apply p-0 ps-0 relative;
+      }
+    }
+
+    [dir="rtl"] {
+      .landing-body {
+        .app-sidebar .side-menu__item {
+          @apply py-[0.8rem] pl-[5rem] pr-4;
+        }
+      }
+    }
+  }
+
+  &.dark {
+    .landing-body {
+      @media (min-width: 991.98px) {
+        .main-menu-container {
+          .landing-logo-container {
+            .horizontal-logo .header-logo {
+              .desktop-logo {
+                @apply hidden #{!important};
+              }
+            }
+          }
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .app-header {
+          .main-header-container {
+            .horizontal-logo .header-logo {
+              .toggle-logo {
+                @apply hidden;
+              }
+
+              .toggle-dark {
+                @apply block;
+              }
+            }
+          }
+        }
+      }
+
+      .landing-trusted-companies {
+        img {
+          @apply invert-[1];
+        }
+      }
+
+      .team-card {
+        &:hover {
+
+          box-shadow: 0 .25rem 1rem 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .team-avatar {
+          box-shadow: 0 0 0 .5rem rgba(255, 255, 255, 0.05);
+        }
+      }
+
+
+      .app-sidebar.sticky.sticky-pin .landing-logo-container .responsive-logo-dark img {
+        @apply block #{!important};
+      }
+
+      .app-sidebar.sticky .landing-logo-container .responsive-logo-light img {
+        @apply hidden #{!important};
+      }
+    }
+
+    .brand-img-light {
+      @apply block;
+      display: block;
+    }
+
+    .brand-img-white {
+      @apply hidden;
+    }
+
+    .section-bg {
+      @apply bg-black/10;
+    }
+  }
+
+  &[dir="ltr"] {
+    .landing-body {
+      @media (min-width: 991.98px) {
+        .app-sidebar {
+          .main-menu {
+            @apply pr-6;
+          }
+        }
+      }
+    }
+  }
+
+  &[dir="rtl"] {
+    .landing-body {
+      @media (min-width: 991.98px) {
+        .app-sidebar {
+          .main-menu {
+            @apply pl-6;
+          }
+        }
+      }
+
+      .testimonials-swipe {
+        .box {
+          @apply dir-rtl;
+        }
+      }
+    }
+  }
+}
+
+.landing-body {
+  .pickr-container-primary :last-child button {
+    @apply block;
+  }
+
+  .pickr-container-background :last-child button {
+    @apply block;
+  }
+
+}
+
+.contact-icon-1 {
+  .fe {
+    @apply text-primary #{!important};
+  }
+}
+
+.contact-icon-2 {
+  .fe {
+    @apply text-danger #{!important};
+  }
+}
+
+.contact-icon-3 {
+  .fe {
+    @apply text-success #{!important};
+  }
+}
+
+.contact-icon-4 {
+  .fe {
+    @apply text-warning #{!important};
+  }
+}
+
+.landing-body {
+  .slide-menu {
+    &.child1,
+    &.child2,
+    &.child3 {
+      @apply p-0 #{!important};
+    }
+  }
+}
+
+[data-nav-layout="horizontal"]{
+.landing-body {
+  .slide-menu {
+    &.child1,
+    &.child2,
+    &.child3 {
+      @apply p-0 #{!important};
+    }
+  }
+}
+}
+/* End Landing Styles */

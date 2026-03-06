@@ -1,0 +1,54 @@
+/* Start Swiper Carousel  Styles */
+
+.swiper {
+  @apply w-full h-full rtl:dirrtl;
+}
+
+.swiper-cube .swiper-cube-shadow:before {
+  @apply bg-transparent;
+}
+
+.swiper-slide img {
+  @apply block w-full h-full object-cover rounded-sm;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply dark:text-white bg-black/20 py-2 px-4 rounded-full h-auto #{!important};
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply text-base text-white #{!important};
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white #{!important};
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  @apply bg-primary #{!important};
+}
+
+.mySwiper7.swiper-free-mode {
+
+  &.swiper-horizontal>.swiper-pagination-bullets,
+  .swiper-pagination-bullets.swiper-pagination-horizontal,
+  .swiper-pagination-custom,
+  .swiper-pagination-fraction {
+    @apply -bottom-4 pt-1 sticky #{!important};
+  }
+}
+
+[dir="rtl"] {
+  .swiper {
+    @apply dir-ltr;
+  }
+}
+.swiper-slide{
+   img {
+  @apply block h-full w-full object-cover #{!important};
+}
+}
+
+/* End Swiper Carousel  Styles */

@@ -1,0 +1,14 @@
+
+    /* Start Tooltip Styles */
+    .ti-main-tooltip {
+        @apply inline-block relative  #{!important};
+        .ti-main-tooltip-toggle {
+            @apply block text-center;
+        }
+    }
+    .ti-main-tooltip-content {
+        @apply leading-4 border-0 hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible bg-white dark:bg-bodybg opacity-0 transition-opacity inline-block absolute invisible z-50 py-1 px-2   text-sm text-white rounded-md shadow-md ;
+    }
+    /* End Tooltip Styles */
+
+    // relative before:absolute before:-bottom-[9px] before:left-[41px] before:border-t-black before:border-transparent before:border-t-[0.4rem] before:border-b-[0.4rem] before:border-x-[0.5rem]
