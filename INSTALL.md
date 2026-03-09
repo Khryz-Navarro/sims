@@ -27,6 +27,7 @@ composer global require laravel/installer
 - open laragon and then click **start all**
 - open terminal then `cd sims`
 - open visual studio code or type this command in the terminal `code .` to open vs code
+- type this command on terminal to install all dependencies `composer update`
 - open terminal in vs code or laragon and type this command `php artisan key:generate` and then copy and paste then edit the `.env` file
 
 ## It should look like this
