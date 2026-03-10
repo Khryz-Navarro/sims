@@ -29,6 +29,9 @@
     <!-- Jsvector Maps -->
     <link rel="stylesheet" href="{{ asset('backend/assets/libs/jsvectormap/css/jsvectormap.min.css') }}">
 
+    <!-- Notifications Css -->
+    <link rel="stylesheet" href="{{ asset('backend/assets/libs/awesome-notifications/style.css') }}">
+
 </head>
 
 <body>
@@ -1329,6 +1332,10 @@
 
     <!-- Custom-Switcher JS -->
     <script src="{{ asset('backend/assets/js/custom-switcher.js') }}"></script>
+
+    <!-- Rating JS -->
+    <script src="{{ asset('backend/assets/libs/awesome-notifications/index.var.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/notifications.js') }}"></script>
 
     <!-- Custom JS -->
     <script src="{{ asset('backend/assets/js/custom.js') }}"></script>
