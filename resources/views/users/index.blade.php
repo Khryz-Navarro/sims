@@ -45,6 +45,7 @@
                                     <th scope="col" class="text-start">Name</th>
                                     <th scope="col" class="text-start">Email</th>
                                     <th scope="col" class="text-start">Phone</th>
+                                    <th scope="col" class="text-start">Address</th>
                                     <th scope="col" class="text-start">Status</th>
                                     <th scope="col" class="text-start">Role</th>
                                     <th scope="col" class="text-start">Date Registered</th>
@@ -62,6 +63,7 @@
                                         </td>
                                         <td class="border border-gray-300 px-4 py-2">{{ $user->email }}</td>
                                         <td class="border border-gray-300 px-4 py-2">{{ $user->phone ?? 'N/A' }}</td>
+                                        <td class="border border-gray-300 px-4 py-2">{{ $user->address }}</td>
                                         <td class="border border-gray-300 px-4 py-2">
                                             @if($user->status == 'active')
                                                 <span class="badge badge-success/10 text-success">Active</span>

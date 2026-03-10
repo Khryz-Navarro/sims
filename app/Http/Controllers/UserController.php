@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-use App\Http\Controllers\UpdateUserRequest;
+use App\Http\Requests\UpdateUserRequest;
 class UserController extends Controller
 {
     /**
@@ -42,6 +42,7 @@ class UserController extends Controller
             'password' => 'required|min:6',
             'phone' => 'nullable|numeric',
             'role' => 'string',
+            'address' => 'string',
         ]);
 
         User::create([
@@ -50,7 +51,7 @@ class UserController extends Controller
             'password' => bcrypt($request->password),
             'phone' => $request->phone,
             'role' => $request->role,
-
+            'address' => $request->address,
         ]);
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
@@ -71,7 +72,8 @@ class UserController extends Controller
     public function edit(string $id)
     {
         //
-        return view('users.edit');
+        $user = User::findOrFail($id);
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -82,9 +84,11 @@ class UserController extends Controller
         $data = $request->validated();
 
         $userData = [
-            'name' => $data['fullname'],
+            'name' => $data['name'],
             'email' => $data['email'],
-            'status' => $data['status'],
+            'phone' => $data['phone'] ?? null,
+            'role' => $data['role'] ?? null,
+            'address' => $data['address'] ?? null,
         ];
 
         if (!empty($data['password'])) {

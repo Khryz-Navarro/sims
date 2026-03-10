@@ -20,7 +20,7 @@
                             <div class="xl:col-span-4 lf:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
                                 <label for="input-label" class="form-label !font-normal">Name:</label>
                                 <input type="text" class="form-control " id="input" name="name"
-                                    value="{{ old($user->name) }}">
+                                    value="{{ old('name', $user->name) }}">
                             </div>
                             {{-- End Input --}}
 
@@ -28,7 +28,7 @@
                             <div class="xl:col-span-4 lf:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
                                 <label for="input-label" class="form-label !font-normal">Email:</label>
                                 <input type="email" class="form-control " id="input" name="email"
-                                    value="{{ old($user->email) }}">
+                                    value="{{ old('email', $user->email) }}">
                             </div>
                             {{-- End Input --}}
 
@@ -43,7 +43,7 @@
                             <div class="xl:col-span-4 lf:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
                                 <label for="input-label" class="form-label !font-normal">Phone:</label>
                                 <input type="text" class="form-control " id="input" name="phone"
-                                    value="{{ old($user->phone) }}">
+                                    value="{{ old('phone', $user->phone) }}">
                             </div>
                             {{-- End Input --}}
 
@@ -51,7 +51,7 @@
                             <div class="xl:col-span-4 lf:col-span-6 md:col-span-6 sm:col-span-12 col-span-12">
                                 <label for="input-label" class="form-label !font-normal">Address:</label>
                                 <input type="text" class="form-control " id="input" name="address"
-                                    value="{{ old($user->address) }}">
+                                    value="{{ old('address', $user->address) }}">
                             </div>
                             {{-- End Input --}}
 
