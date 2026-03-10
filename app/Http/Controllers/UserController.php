@@ -40,12 +40,17 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|min:6',
+            'phone' => 'nullable|numeric',
+            'role' => 'string',
         ]);
 
         User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
+            'phone' => $request->phone,
+            'role' => $request->role,
+
         ]);
 
         return redirect()->route('users.index')->with('success', 'User created successfully.');
