@@ -29,7 +29,7 @@
             @if (session('success'))
                 <div class="box-body">
                     <div id="dismiss-alert"
-                        class="hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 bg-success/10 border border-success/20 alert mb-0"
+                        class="hs-removing:translate-x-5 hs-removing:opacity-0 transition duration-300 bg-success/10 !border-success border-success/20 alert mb-0"
                         role="alert">
                         <div class="flex">
                             <div class="flex-shrink-0">
@@ -120,7 +120,7 @@
                                     @foreach ($users as $user)
                                         <tr class="hover:bg-gray-500 dark:hover:bg-gray-700/50">
                                             <td class="border border-gray-300 px-4 py-2">
-                                                <span class="avatar avatar-xs me-2 online avatar-rounded">
+                                                <span class="avatar avatar-xs me-2 online avatar-rounded animate-pulse">
                                                     <img src="{{ $user->photo ? asset($user->photo) : asset('backend/assets/images/faces/13.jpg') }}"
                                                         alt="img" class="object-cover h-full w-full">
                                                 </span> {{ $user->name }}
@@ -129,7 +129,7 @@
                                             <td class="border border-gray-300 px-4 py-2">{{ $user->phone ?? 'N/A' }}</td>
                                             <td class="border border-gray-300 px-4 py-2">{{ $user->address }}</td>
                                             <td class="border border-gray-300 px-4 py-2">
-                                                @if($user->status == 'active')
+                                                @if ($user->status == 'active')
                                                     <span class="badge badge-success/10 text-success">Active</span>
                                                 @else
                                                     <span class="badge badge-danger/10 text-danger">Inactive</span>
@@ -140,19 +140,62 @@
                                                 {{ $user->created_at->format('d M Y h:i A') }}
                                             </td>
                                             <td class="border border-gray-300 px-4 py-2">
+
                                                 <div class="hstack gap-2 flex-wrap">
                                                     <a href="{{ route('users.edit', $user->id) }}"
                                                         class="text-info text-[.875rem] leading-none border-0 bg-transparent"><i
                                                             class="ri-edit-line"></i></a>
-                                                    <form action="{{ route('users.destroy', $user->id) }}" method="POST"
-                                                        class="inline-block"
-                                                        onsubmit="return confirm('Are you sure you want to delete this user?');">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit" aria-label="anchor"
-                                                            class="text-danger text-[.875rem] leading-none border-0 bg-transparent"><i
-                                                                class="ri-delete-bin-5-line"></i></button>
-                                                    </form>
+
+                                                    <button type="submit" aria-label="anchor"
+                                                        class="text-danger text-[.875rem] leading-none border-0 bg-transparent"
+                                                        data-hs-overlay="#todo-compose"><i class="ri-delete-bin-5-line"></i></button>
+                                                </div>
+                                                <div>
+                                                    <div id="todo-compose"
+                                                        class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none">
+                                                        <div
+                                                            class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+                                                            <div
+                                                                class="flex flex-col bg-white dark:bg-bodybg border border-defaultborder dark:border-defaultborder/10 shadow-sm rounded-sm pointer-events-auto">
+                                                                <div
+                                                                    class="flex justify-between items-center py-3 px-4 border-b border-defaultborder dark:border-defaultborder/10">
+                                                                    <h6 class="modal-title text-[1rem] font-semibold"
+                                                                        id="mail-ComposeLabel">Confirm Deletion</h6>
+                                                                    <button type="button"
+                                                                        class="flex justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                                                                        data-hs-overlay="#exampleModalScrollable">
+                                                                        <span class="sr-only">Close</span>
+                                                                        <svg class="flex-shrink-0 size-4"
+                                                                            xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                                            viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                                                            stroke-width="2" stroke-linecap="round"
+                                                                            stroke-linejoin="round">
+                                                                            <path d="M18 6 6 18" />
+                                                                            <path d="m6 6 12 12" />
+                                                                        </svg>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="p-4 overflow-y-auto">
+                                                                    Are you sure you want to delete this user? This action cannot be
+                                                                    undone.
+                                                                </div>
+                                                                <div
+                                                                    class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-defaultborder dark:border-defaultborder/10">
+                                                                    <button type="button" class="ti-btn  ti-btn-light"
+                                                                        data-hs-overlay="#todo-compose">
+                                                                        Close
+                                                                    </button>
+                                                                    <form action="{{ route('users.destroy', $user->id) }}" method="POST"
+                                                                        class="inline-block">
+                                                                        @csrf
+                                                                        @method('DELETE')
+                                                                        <button type="submit"
+                                                                            class="ti-btn bg-primary text-white !font-medium">Delete</button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </td>
                                         </tr>
