@@ -26,8 +26,8 @@ composer global require laravel/installer
 - copy to C:\laragon\www
 - open laragon
 - click **start all**
-- open terminal then `cd sims`
-- open visual studio
+- open terminal `cd sims`
+- open visual studio `code .`
 - Copy `.env` file
 - Install Dependencies `composer install`
 - Install NPM dependencies `npm install`
@@ -35,7 +35,7 @@ composer global require laravel/installer
 - Generate key `php artisan key:generate`
 - Create Database `php artisan migrate`
 
-## `.env` file should look like this
+## `.env` file
 
 ```
 DB_CONNECTION=mysql
@@ -50,10 +50,8 @@ DB_PASSWORD=
 
 # Running the Website
 
-- To run the website paste this command in the terminal
-
 ```
 php artisan serve
-```
+http://127.0.0.1:8000/
 
-- type `http://127.0.0.1:8000/`
+```
