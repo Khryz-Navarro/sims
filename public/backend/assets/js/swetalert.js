@@ -1,13 +1,20 @@
 (function () {
   "use strict";
 
+  const onClick = (selector, handler) => {
+    const element = document.querySelector(selector);
+    if (element) {
+      element.addEventListener("click", handler);
+    }
+  };
+
   /* Basic Sweetalert  */
-  document.querySelector("#basic").addEventListener('click', function () {
+  onClick("#basic", function () {
     Swal.fire('Welcome TO Your Admin Page')
   });
 
   /* Sweetalert Style-1 */
-  document.querySelector("#sweetalert1").addEventListener('click', function () {
+  onClick("#sweetalert1", function () {
     Swal.fire(
       'The Internet ?',
       'That thing is still around ?',
@@ -16,7 +23,7 @@
   });
 
   /* Error Sweetalert */
-  document.querySelector("#error-sweetalert").addEventListener('click', function () {
+  onClick("#error-sweetalert", function () {
     Swal.fire({
       icon: 'error',
       title: 'Oops...',
@@ -26,7 +33,7 @@
   });
 
   /* Image Sweetalert */
-  document.querySelector("#image-sweetalert").addEventListener('click', function () {
+  onClick("#image-sweetalert", function () {
     Swal.fire({
       imageUrl: '../assets/images/brand-logos/toggle-logo.png',
       // imageHeight: 40,
@@ -35,7 +42,7 @@
   });
 
   /* Sweetalert with 3buttons */
-  document.querySelector("#sweetalert2").addEventListener('click', function () {
+  onClick("#sweetalert2", function () {
     Swal.fire({
       title: 'Do you want to save the changes?',
       showDenyButton: true,
@@ -53,7 +60,7 @@
   });
 
   /* Sweetalert with animation */
-  document.querySelector("#sweetalert3").addEventListener('click', function () {
+  onClick("#sweetalert3", function () {
     Swal.fire({
       title: 'Custom animation with Animate.css',
       showClass: {
@@ -66,7 +73,7 @@
   });
 
   /* Sweetalert Top-End */
-  document.querySelector("#top-end").addEventListener('click', function () {
+  onClick("#top-end", function () {
     Swal.fire({
       position: 'top-end',
       icon: 'success',
@@ -76,7 +83,7 @@
     })
   });
   /* Sweetalert Top-Start */
-  document.querySelector("#top-start").addEventListener('click', function () {
+  onClick("#top-start", function () {
     Swal.fire({
       position: 'top-start',
       icon: 'success',
@@ -87,7 +94,7 @@
   });
 
   /* Sweetalert Bottom-Start */
-  document.querySelector("#bottom-start").addEventListener('click', function () {
+  onClick("#bottom-start", function () {
     Swal.fire({
       position: 'bottom-start',
       icon: 'success',
@@ -98,7 +105,7 @@
   });
 
   /* Sweetalert Bottom-End */
-  document.querySelector("#bottom-end").addEventListener('click', function () {
+  onClick("#bottom-end", function () {
     Swal.fire({
       position: 'bottom-end',
       icon: 'success',
@@ -109,7 +116,7 @@
   });
 
   /*Confirm Button Sweetalert  */
-  document.querySelector("#confirm-btn").addEventListener('click', function () {
+  onClick("#confirm-btn", function () {
     Swal.fire({
       title: 'Are you sure?',
       text: "You won't be able to revert this!",
@@ -130,7 +137,7 @@
   });
 
   /*Parameters passing Sweetalert  */
-  document.querySelector("#sweetalert4").addEventListener('click', function () {
+  onClick("#sweetalert4", function () {
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
         confirmButton: 'ti-btn bg-secondary text-white hover:bg-secondary focus:ring-secondary dark:focus:ring-offset-secondary',
@@ -168,7 +175,7 @@
   });
 
   /*Parameters passing Sweetalert  */
-  document.querySelector("#customized-btn").addEventListener('click', function () {
+  onClick("#customized-btn", function () {
     Swal.fire({
       title: 'Custom width, padding, color, background.',
       width: 600,
@@ -181,7 +188,7 @@
   });
 
   /*Auto Close Sweetalert  */
-  document.querySelector("#timer-btn").addEventListener('click', function () {
+  onClick("#timer-btn", function () {
     let timerInterval
     Swal.fire({
       title: 'Auto close alert!',
@@ -206,7 +213,7 @@
   });
 
   /*Ajax Request Sweetalert  */
-  document.querySelector("#ajax-btn").addEventListener('click', function () {
+  onClick("#ajax-btn", function () {
     Swal.fire({
       title: 'Submit your username',
       input: 'text',

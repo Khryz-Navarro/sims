@@ -26,11 +26,21 @@
 
     <!-- Color Picker Css -->
     <link rel="stylesheet" href="{{ asset('backend/assets/libs/@simonwep/pickr/themes/nano.min.css') }}">
+
     <!-- Jsvector Maps -->
     <link rel="stylesheet" href="{{ asset('backend/assets/libs/jsvectormap/css/jsvectormap.min.css') }}">
 
     <!-- Notifications Css -->
     <link rel="stylesheet" href="{{ asset('backend/assets/libs/awesome-notifications/style.css') }}">
+
+    <!-- Sweet Alert Css -->
+    <link rel="stylesheet" href="{{ asset('backend/assets/libs/sweetalert2/sweetalert2.min.css') }}">
+
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="{{ asset('backend/assets/libs/animate.css/animate.min.css') }}">
+
+    <!-- Prism CSS -->
+    <link rel="stylesheet" href="{{ asset('backend/assets/libs/prismjs/themes/prism-coy.min.css') }}">
 
 </head>
 
@@ -1334,8 +1344,20 @@
     <script src="{{ asset('backend/assets/js/custom-switcher.js') }}"></script>
 
     <!-- Rating JS -->
+    {{--
     <script src="{{ asset('backend/assets/libs/awesome-notifications/index.var.js') }}"></script>
-    <script src="{{ asset('backend/assets/js/notifications.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/notifications.js') }}"></script> --}}
+
+    <!-- Sweetalert JS -->
+    <script src="{{ asset('backend/assets/libs/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/swetalert.js') }}"></script>
+
+    <!-- Prism JS -->
+    <script src="{{ asset('backend/assets/libs/prismjs/prism.js') }}"></script>
+    <script src="{{ asset('backend/assets/js/prism-custom.js') }}"></script>
+
+    <!-- Alerts JS -->
+    <script src="{{ asset('backend/assets/js/alerts.js') }}"></script>
 
     <!-- Custom JS -->
     <script src="{{ asset('backend/assets/js/custom.js') }}"></script>

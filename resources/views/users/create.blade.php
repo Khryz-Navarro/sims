@@ -62,7 +62,9 @@
                             </div>
                             {{-- End Input --}}
                         </div>
-                        <button type="submit" class="form-control ti-btn !text-white !bg-primary mt-4">Create User</button>
+                        <button type="submit" class="form-control ti-btn !text-white !bg-primary mt-4" id="timer-btn">
+                            Create User
+                        </button>
                     </form>
                 </div>
                 <div class="box-footer hidden border-t-0">
