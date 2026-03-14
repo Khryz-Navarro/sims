@@ -10,8 +10,9 @@
                     Users Tables
                 </div>
                 <div>
-                    <button type="button" class="ti-btn !py-1 !px-2 ti-btn-primary !font-medium !text-[0.75rem]">Add User
-                        <i class="ri-user-add-line ms-2 inline-block align-middle"></i></button>
+                    <a href="{{ route('users.create') }}" type="button"
+                        class="ti-btn !py-1 !px-2 ti-btn-primary !font-medium !text-[0.75rem]">Add User
+                        <i class="ri-user-add-line ms-2 inline-block align-middle"></i></a>
                 </div>
             </div>
             @if ($users->count())
