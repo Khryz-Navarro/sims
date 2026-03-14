@@ -41,7 +41,7 @@ composer global require laravel/installer
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=simplecrud
+DB_DATABASE=sims
 DB_USERNAME=root
 DB_PASSWORD=
 ```
