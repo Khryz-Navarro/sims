@@ -30,7 +30,7 @@
                 <div class="main-header-center hidden lg:block">
                     <input
                         class="form-control placeholder:!text-headerprimecolor placeholder:opacity-70 placeholder:font-thin placeholder:text-sm"
-                        placeholder="Search for anything..." type="search" disabled>
+                        placeholder="Search for anything..." type="search">
                     <button class="btn"><i class="fa fa-search hidden md:block opacity-[0.5]"></i></button>
                 </div>
                 <!-- End::header-link -->
